@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何创建vuepress站点 | 我的Vuepress学习笔记</title>
+    <meta name="description" content="my first docs website">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/mydocs/assets/css/0.styles.9e0a4a78.css" as="style"><link rel="preload" href="/mydocs/assets/js/app.268587ec.js" as="script"><link rel="preload" href="/mydocs/assets/js/2.05decb16.js" as="script"><link rel="preload" href="/mydocs/assets/js/11.230f9bf6.js" as="script"><link rel="prefetch" href="/mydocs/assets/js/10.a544fca6.js"><link rel="prefetch" href="/mydocs/assets/js/12.7dc8075b.js"><link rel="prefetch" href="/mydocs/assets/js/3.9b40026b.js"><link rel="prefetch" href="/mydocs/assets/js/4.9bd71425.js"><link rel="prefetch" href="/mydocs/assets/js/5.9a63689f.js"><link rel="prefetch" href="/mydocs/assets/js/6.2a524a87.js"><link rel="prefetch" href="/mydocs/assets/js/7.01ecbde0.js"><link rel="prefetch" href="/mydocs/assets/js/8.fc881fcc.js"><link rel="prefetch" href="/mydocs/assets/js/9.e839dd82.js">
+    <link rel="stylesheet" href="/mydocs/assets/css/0.styles.9e0a4a78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mydocs/" class="home-link router-link-active"><!----> <span class="site-name">我的Vuepress学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mydocs/note/" class="nav-link router-link-exact-active router-link-active">
+  学习笔记
+</a></div><div class="nav-item"><a href="/mydocs/about/" class="nav-link">
+  自我介绍
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mydocs/note/" class="nav-link router-link-exact-active router-link-active">
+  学习笔记
+</a></div><div class="nav-item"><a href="/mydocs/about/" class="nav-link">
+  自我介绍
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>学习笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mydocs/note/" class="active sidebar-link">如何创建vuepress站点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mydocs/note/#准备工作" class="sidebar-link">准备工作</a></li><li class="sidebar-sub-header"><a href="/mydocs/note/#创建vuepress站点" class="sidebar-link">创建vuepress站点</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="如何创建vuepress站点"><a href="#如何创建vuepress站点" class="header-anchor">#</a> 如何创建vuepress站点</h1> <h2 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作</h2> <p>vuepress是一套页面静态化的工具，基于vue，vue-router,vue ssr等技术。把markdown文件转化成html页面，在转化的过程中会生成导航和侧栏链接。让文档编写者能够更专注于文档内容。</p> <p>这个工具是工作在node环境下的，所以首先得安装node。而且版本不能低于8.6。</p> <p>另外vuepress默认主题是通过包管理工具来下载安装的。所以还得安装npm或者yarn。</p> <p>我选择的是yarn。</p> <h2 id="创建vuepress站点"><a href="#创建vuepress站点" class="header-anchor">#</a> 创建vuepress站点</h2> <ul><li>创建项目目录</li></ul> <p>我的项目目录是mydocs，路径是D:\vue\mydocs</p> <ul><li>进入目录创建</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>D:
+<span class="token builtin class-name">cd</span> vue/mydocs
+</code></pre></div><ul><li>创建站点</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> create vuepress
+</code></pre></div><p>选择docs</p> <p>输入相关信息，比如描述，邮箱，作者等信息</p> <p>由于创建站点前初始化了一下，所以此时提示是否覆盖package.json。我选择了覆盖</p> <ul><li>运行站点</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>vuepress dev docs
+</code></pre></div><p>站点成功运行后，将显示站点地址</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mydocs/assets/js/app.268587ec.js" defer></script><script src="/mydocs/assets/js/2.05decb16.js" defer></script><script src="/mydocs/assets/js/11.230f9bf6.js" defer></script>
+  </body>
+</html>
